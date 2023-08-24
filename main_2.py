@@ -34,8 +34,7 @@ tabela_pos2019_comp = filtra_ano_curso(nome_tabela, 'AnoIngresso', 2019, 'Curso'
 #Concerta ano de ingresso dos alunos de computação para 2018
 tabela_concerta_ano = update(nome_tabela, 'AnoIngresso', 2018, 'Curso', 'Computação')
 
-
-
+conn.close()
 
 
 
