@@ -12,9 +12,11 @@ Iremos utilizar a plataforma https://sqliteonline.com/ para treinar comandos SQL
    - **Enunciado**: Liste todos os jogos disponíveis para a plataforma Xbox One. (copie e cole o comando e as 5 primeiras linhas do resultado aqui)
    - **Query**:
      ```sql
-      
+      SELECT * FROM vgsales_pbi WHERE Platform = 'XOne';
      ```
    - **Resultado**
+   ![Descrição da Imagem](/prints/XOne.png)
+   
     
 
 
@@ -22,9 +24,10 @@ Iremos utilizar a plataforma https://sqliteonline.com/ para treinar comandos SQL
    - **Enunciado**: Liste todos os jogos do gênero "Ação" que foram lançados após 2010.  (copie e cole o comando e as 5 primeiras linhas do resultado aqui)
    - **Query**:
      ```sql
-      
+      SELECT * FROM vgsales_pbi WHERE Genre='Action' AND Year >='2010,0';
      ```
    - **Resultado**
+   ![Descrição da Imagem](/prints/Acao.png)
     
 
 
@@ -32,9 +35,10 @@ Iremos utilizar a plataforma https://sqliteonline.com/ para treinar comandos SQL
    - **Enunciado**: Liste os 5 jogos mais recentes lançados.  (copie e cole o comando e as 5 primeiras linhas do resultado aqui)
    - **Query**:
      ```sql
-      
+      SELECT * FROM vgsales_pbi ORDER BY Year DESC LIMIT 5;
      ```
    - **Resultado**
+    ![Descrição da Imagem](/prints/Jogos_novos.png)
     
 
 
@@ -42,9 +46,10 @@ Iremos utilizar a plataforma https://sqliteonline.com/ para treinar comandos SQL
    - **Enunciado**: Liste os 5 jogos mais antigos.  (copie e cole o comando e as 5 primeiras linhas do resultado aqui)
    - **Query**:
      ```sql
-      
+      SELECT * FROM vgsales_pbi ORDER BY Year ASC LIMIT 5;
      ```
    - **Resultado**
+   ![Descrição da Imagem](/prints/Jogos_antigos.png)
     
 
 
@@ -52,10 +57,10 @@ Iremos utilizar a plataforma https://sqliteonline.com/ para treinar comandos SQL
    - **Enunciado**: Quais são os 3 jogos do gênero "Aventura" com as maiores vendas na América do Norte?  (copie e cole o comando e as 5 primeiras linhas do resultado aqui)
    - **Query**:
      ```sql
-      
+      SELECT * FROM vgsales_pbi WHERE Genre='Adventure' ORDER BY NA_Sales DESC LIMIT 3;
      ```
    - **Resultado**
-    
+    ![Descrição da Imagem](/prints/Top3_NA.png)
 
 
 	 
@@ -63,9 +68,10 @@ Iremos utilizar a plataforma https://sqliteonline.com/ para treinar comandos SQL
    - **Enunciado**: Liste todos os jogos dos gêneros "RPG" ou "Strategy" lançados após 2005.  (copie e cole o comando e as 5 primeiras linhas do resultado aqui)
    - **Query**:
      ```sql
-      
+      SELECT * FROM vgsales_pbi WHERE Year>'2005' AND Genre='Strategy' OR Genre='Role-Playing';
      ```
    - **Resultado**
+   ![Descrição da Imagem](/prints/RPG_Strategy.png)
     
 
 
